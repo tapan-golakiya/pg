@@ -2,11 +2,7 @@ import numpy as np
 import cv2
 
 ## The readImage function takes a file path as argument and returns image in binary form.
-def readImage(filePath):
-	cap = cv2.imread(filePath,cv2.CV_LOAD_IMAGE_GRAYSCALE)
-	(thresh, binaryImage) = cv2.threshold(cap, 128, 255, cv2.THRESH_BINARY | cv2.THRESH_OTSU)
-	cv2.imshow('frame',binaryImage)
-	return binaryImage
+
 
 ## The findNeighbours function takes a maze image and row and column coordinates of a cell as input arguments
 ## and returns a stack consisting of all the neighbours of the cell as output.
